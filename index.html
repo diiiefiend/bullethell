@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>ASTEROIDS!!!!!</title>
+  <script src="lib/movingObject.js"></script>
+  <script src="lib/utils.js"></script>
+  <script src="lib/asteroid.js"></script>
+  <script src="lib/game.js"></script>
+  <script src="lib/gameView.js"></script>
+  <style>
+  canvas{
+    border: 1px solid black;
+  }
+  </style>
+</head>
+<body>
+  <h1>ARIEL AND JORDAN'S ASTEROID PAGE!</h1>
+  <canvas></canvas>
+
+  <script>
+    var canvasEl = document.getElementsByTagName("canvas")[0];
+    canvasEl.height = window.innerHeight;
+    canvasEl.width = window.innerWidth;
+    var ctxt = canvasEl.getContext('2d');
+
+    var game = new window.Asteroids.Game();
+    var gameView = new window.Asteroids.GameView(game, ctxt);
+    gameView.start();
+  </script>
+</body>
+</html>
