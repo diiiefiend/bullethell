@@ -15,26 +15,89 @@
     text-align: center;
     background: black;
     color: white;
+    font-family: arial, sans-serif;
   }
 
   canvas{
     border: 1px solid white;
     background: black;
   }
+
+  #instructs{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    text-align: left;
+    width: 400px;
+    color: black;
+    margin: 100px 35vw;
+    background: white;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 200%;
+  }
+
+  h1{
+    letter-spacing: 0.1em;
+    font-weight: normal;
+  }
+
+  h3{
+    text-transform: lowercase;
+    font-variant: small-caps;
+    letter-spacing: .1em;
+  }
+
+  strong{
+    text-transform: uppercase;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  a{
+    color: white;
+  }
   </style>
 </head>
 <body>
-  <h1>ASTEROIDS!</h1>
+  <h1>ASTEROIDS</h1>
+  <h3><a href="http://arielity.net">Ariel Hou</a>, Sep 2015</h3>
+
+  <div id="instructs">
+    <h1>How to Play</h1>
+    <p>It's simple: you are the weird triangle/rectangle hybrid, and you want to shoot the circles ("asteroids")!
+      Controls are: </p>
+      <ul>
+        <li><strong>up/down:</strong> move backward/forward</li>
+        <li><strong>left/right:</strong> turn counter-clockwise/clockwise</li>
+        <li><strong>spacebar:</strong> shoot (can hold down to run and gun)</li>
+        <li><strong>z:</strong> hard brake (speed=0; the physics totally work)</li>
+      </ul>
+
+      <p>Press <strong>spacebar</strong> to start!</p>
+  </div>
+
   <canvas></canvas>
+
   <script>
     var canvasEl = document.getElementsByTagName("canvas")[0];
     canvasEl.height = 600;
     canvasEl.width = 800;
+    var game = new window.Asteroids.Game();
     var ctxt = canvasEl.getContext('2d');
 
-    var game = new window.Asteroids.Game();
-    var gameView = new window.Asteroids.GameView(game, ctxt);
-    gameView.start();
+    $(document).keypress(function (e){
+      if(e.keyCode === 32){
+        $("#instructs").toggle();
+        $(document).unbind("keypress");         //unbind initial spacebar event
+        var gameView = new window.Asteroids.GameView(game, ctxt);
+        gameView.start();
+      };
+    });
+
   </script>
 </body>
 </html>
