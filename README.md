@@ -1,6 +1,11 @@
 #Asteroids
 Ariel Hou, Sep 2015
 
+#Live Game
+[http://temp.arielity.net/asteroids][link]
+
+[link]: http://temp.arielity.net/asteroids
+
 ##How to Play
 * *Up*: move forward
 * *Down*: move "backward" (away from direction you are facing)
