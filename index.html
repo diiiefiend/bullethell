@@ -11,7 +11,6 @@
   <script src="lib/gameView.js"></script>
   <style>
   body{
-    overflow: hidden;
     text-align: center;
     background: black;
     color: white;
@@ -84,8 +83,11 @@
 
   <script>
     var canvasEl = document.getElementsByTagName("canvas")[0];
-    canvasEl.height = 600;
-    canvasEl.width = 800;
+    // canvasEl.height = 600;
+    // canvasEl.width = 800;
+    canvasEl.height = window.innerHeight-200;
+    canvasEl.width = window.innerWidth-50;
+
     var game = new window.Asteroids.Game();
     var ctxt = canvasEl.getContext('2d');
 
