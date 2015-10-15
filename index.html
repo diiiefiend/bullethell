@@ -91,10 +91,10 @@
     var game = new window.Asteroids.Game();
     var ctxt = canvasEl.getContext('2d');
 
-    $(document).keypress(function (e){
+    $(document).keydown(function (e){
       if(e.keyCode === 32){
         $("#instructs").toggle();
-        $(document).unbind("keypress");         //unbind initial spacebar event
+        $(document).unbind("keydown");         //unbind initial spacebar event
         var gameView = new window.Asteroids.GameView(game, ctxt);
         gameView.start();
       };
