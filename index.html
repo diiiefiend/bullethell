@@ -1,12 +1,13 @@
 <html>
 <head>
-  <title>ASTEROIDS!!!!!</title>
+  <title>Bullet Hell</title>
   <script src="lib/jquerymin.js"></script>
   <script src="lib/movingObject.js"></script>
   <script src="lib/utils.js"></script>
   <script src="lib/bullet.js"></script>
   <script src="lib/ship.js"></script>
   <script src="lib/asteroid.js"></script>
+  <script src="lib/planet.js"></script>
   <script src="lib/game.js"></script>
   <script src="lib/gameView.js"></script>
   <style>
@@ -29,10 +30,10 @@
     text-align: left;
     width: 400px;
     color: black;
-    margin: 100px 35vw;
+    margin: 50px 35vw;
     background: white;
     padding: 20px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 200%;
   }
 
@@ -62,7 +63,7 @@
   </style>
 </head>
 <body>
-  <h1>ASTEROIDS</h1>
+  <h1>BULLET HELL</h1>
   <h3><a href="http://arielity.net">Ariel Hou</a>, Sep 2015</h3>
 
   <div id="instructs">
@@ -70,10 +71,8 @@
     <p>It's simple: you are the weird triangle/rectangle hybrid, and you want to shoot the circles ("asteroids")!
       Controls are: </p>
       <ul>
-        <li><strong>up/down:</strong> move backward/forward</li>
-        <li><strong>left/right:</strong> turn counter-clockwise/clockwise</li>
+        <li><strong>direction keys:</strong> move in said direction</li>
         <li><strong>spacebar:</strong> shoot (can hold down to run and gun)</li>
-        <li><strong>z:</strong> hard brake (speed=0; the physics totally work)</li>
       </ul>
 
       <p>Press <strong>spacebar</strong> to start!</p>
