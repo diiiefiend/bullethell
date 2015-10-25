@@ -21,6 +21,7 @@ Ariel Hou, Oct 2015
 - [ ] Animate ship thrusters
 - [ ] Configure enemy ship path
 - [ ] Configure enemy ship attack pattern
+- [ ] Animate things to have explosion animations
 
 ###Sources
 * [Ship sprite][link2]

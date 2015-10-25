@@ -6,7 +6,7 @@
   <script src="lib/utils.js"></script>
   <script src="lib/bullet.js"></script>
   <script src="lib/ship.js"></script>
-  <script src="lib/asteroid.js"></script>
+  <script src="lib/enemy.js"></script>
   <script src="lib/planet.js"></script>
   <script src="lib/game.js"></script>
   <script src="lib/gameView.js"></script>
@@ -68,7 +68,7 @@
 
   <div id="instructs">
     <h1>How to Play</h1>
-    <p>It's simple: you are the weird triangle/rectangle hybrid, and you want to shoot the circles ("asteroids")!
+    <p>It's simple: you are a ship and you want to shoot things!
       Controls are: </p>
       <ul>
         <li><strong>direction keys:</strong> move in said direction</li>
@@ -87,14 +87,14 @@
     canvasEl.height = window.innerHeight-200;
     canvasEl.width = window.innerWidth-50;
 
-    var game = new window.Asteroids.Game();
+    var game = new window.BHGame.Game();
     var ctxt = canvasEl.getContext('2d');
 
     $(document).keydown(function (e){
       if(e.keyCode === 32){
         $("#instructs").toggle();
         $(document).unbind("keydown");         //unbind initial spacebar event
-        var gameView = new window.Asteroids.GameView(game, ctxt);
+        var gameView = new window.BHGame.GameView(game, ctxt);
         gameView.start();
       };
     });
