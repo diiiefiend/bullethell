@@ -26,6 +26,8 @@ Ariel Hou, Oct 2015
 ###Sources
 * [Ship sprite][link2]
 * [Bullet sprite][link3]
+* [Enemy1 sprite][link4]
 
 [link2]: http://opengameart.org/content/spaceship-fighter-ipod1
 [link3]: http://opengameart.org/content/bullet-collection-1-m484
+[link4]: http://pixeljoint.com/pixelart/28896.htm
