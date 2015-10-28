@@ -2,9 +2,9 @@
 Ariel Hou, Oct 2015
 
 #Live Game
-[http://projects.arielity.net/bullethell][link]
+[http://projects.arielity.net/bh][link]
 
-[link]: http://projects.arielity.net/bullethell
+[link]: http://projects.arielity.net/bh
 
 ##Specs
 * Uses **HTML5 Canvas** to draw all elements
