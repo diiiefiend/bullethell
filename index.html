@@ -3,6 +3,7 @@
   <title>Bullet Hell</title>
   <script src="lib/jquerymin.js"></script>
   <script src="lib/utils.js"></script>
+  <script src="lib/resources.js"></script>
   <script src="lib/movingObject.js"></script>
   <script src="lib/enemyObject.js"></script>
   <script src="lib/bullet.js"></script>
@@ -102,9 +103,21 @@
       if(e.keyCode === 32){
         $("#instructs").toggle();
         $(document).unbind("keydown");         //unbind initial spacebar event
+
         var gameView = new window.BHGame.GameView(game, ctxt);
         document.getElementById('bgm').play();
-        gameView.start();
+
+        window.BHGame.Resources.load([
+            'img/bg.png',
+            'img/ship_sprite.png',
+            'img/enemy1.png',
+            'img/enemy2.png',
+            'img/bullet_sprite.png',
+            'img/boss.png'
+        ]);
+
+        window.BHGame.Resources.onReady(gameView.start.bind(gameView));
+
       };
     });
 
