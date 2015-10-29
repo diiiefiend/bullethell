@@ -84,6 +84,10 @@
 
   <canvas></canvas>
 
+
+  <audio id="bgm" src="audio/space-philately.ogg" preload="auto" loop="true"></audio>
+  <audio id="shootFX" src="audio/laser.wav" preload="auto"></audio>
+
   <script>
     var canvasEl = document.getElementsByTagName("canvas")[0];
     // canvasEl.height = 600;
@@ -99,6 +103,7 @@
         $("#instructs").toggle();
         $(document).unbind("keydown");         //unbind initial spacebar event
         var gameView = new window.BHGame.GameView(game, ctxt);
+        document.getElementById('bgm').play();
         gameView.start();
       };
     });
