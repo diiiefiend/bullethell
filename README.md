@@ -15,11 +15,11 @@ Ariel Hou, Oct 2015
 * *Space*: shoot
 
 ##To Do
-- [ ] Configure enemy ship path
-- [ ] Configure enemy ship attack pattern
-- [ ] Add sprites for enemy ships
-- [ ] Animate bullets to strobe
-- [ ] Animate ship thrusters
+- [x] Configure enemy ship path
+- [x] Configure enemy ship attack pattern
+- [x] Add sprites for enemy ships
+- [x] Animate bullets to strobe
+- [x] Animate ship thrusters
 - [ ] Add background animation
 - [ ] Animate things to have explosion animations
 - [ ] Add appropriate soundtrack
@@ -27,11 +27,14 @@ Ariel Hou, Oct 2015
 ###Sources
 * [Ship sprite][link2]
 * [Bullet sprite][link3]
-* [Enemy1 sprite][link4]
+* Enemy1 sprite: I forget
+* [Enemy2 sprite][link4]
 * [Bg image][link5]
 * [Boss sprite][link6]
 * [BG music][link7]
 * [Laser fx][link8]
+* [Boss music][link9]
+* [Win/lose fx][link10]
 
 [link2]: http://opengameart.org/content/spaceship-fighter-ipod1
 [link3]: http://opengameart.org/content/bullet-collection-1-m484
@@ -40,3 +43,5 @@ Ariel Hou, Oct 2015
 [link6]: http://artscum.files.wordpress.com/2010/11/onslaught_sprite.jpg
 [link7]: http://opengameart.org/content/space-philately-seamless-loop
 [link8]: http://opengameart.org/content/laser-fire
+[link9]: http://opengameart.org/content/fast-fight-battle-music
+[link10]: http://opengameart.org/content/oldschool-win-and-die-jump-and-run-sounds
