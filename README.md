@@ -31,10 +31,14 @@ Ariel Hou, Oct 2015
 * [Enemy2 sprite][link4]
 * [Bg image][link5]
 * [Boss sprite][link6]
+* [Explosion sprite sheet][link11]
 * [BG music][link7]
 * [Laser fx][link8]
 * [Boss music][link9]
 * [Win/lose fx][link10]
+* [Explosion fx][link12]
+
+Animations created by me, building on these sprites, with the exception of the explosion sprite.
 
 [link2]: http://opengameart.org/content/spaceship-fighter-ipod1
 [link3]: http://opengameart.org/content/bullet-collection-1-m484
@@ -45,3 +49,5 @@ Ariel Hou, Oct 2015
 [link8]: http://opengameart.org/content/laser-fire
 [link9]: http://opengameart.org/content/fast-fight-battle-music
 [link10]: http://opengameart.org/content/oldschool-win-and-die-jump-and-run-sounds
+[link11]: http://stpiusxhigh.com/Gravelle/GameMaker/Maze/Level%203%20and%20Beyond.htm
+[link12]: http://opengameart.org/content/8-bit-sound-effects-library

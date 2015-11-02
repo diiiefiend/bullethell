@@ -5,9 +5,10 @@
   <script src="lib/utils.js"></script>
   <script src="lib/resources.js"></script>
   <script src="lib/movingObject.js"></script>
-  <script src="lib/enemyObject.js"></script>
+  <script src="lib/explosion.js"></script>
   <script src="lib/bullet.js"></script>
   <script src="lib/ship.js"></script>
+  <script src="lib/enemyObject.js"></script>
   <script src="lib/enemyBullet.js"></script>
   <script src="lib/enemyHomingBullet.js"></script>
   <script src="lib/enemy1.js"></script>
@@ -91,6 +92,7 @@
   <audio id="shootFX" src="audio/laser.wav" preload="auto"></audio>
   <audio id="loseFX" src="audio/lose.wav" preload="auto"></audio>
   <audio id="winFX" src="audio/win.wav" preload="auto"></audio>
+  <audio id="xplodeFX" src="audio/explosion.mp3" preload="auto"></audio>
 
   <script>
     var canvasEl = document.getElementsByTagName("canvas")[0];
@@ -115,7 +117,8 @@
             'img/enemy1.png',
             'img/enemy2.png',
             'img/bullet_sprite.png',
-            'img/boss.png'
+            'img/boss.png',
+            'img/explosion.png'
         ]);
 
         window.BHGame.Resources.onReady(gameView.start.bind(gameView));
