@@ -21,13 +21,13 @@ Ariel Hou, Oct 2015
 - [x] Animate bullets to strobe
 - [x] Animate ship thrusters
 - [ ] Add background animation
-- [ ] Animate things to have explosion animations
-- [ ] Add appropriate soundtrack
+- [x] Animate things to have explosions
+- [x] Add appropriate soundtrack
 
 ###Sources
 * [Ship sprite][link2]
 * [Bullet sprite][link3]
-* Enemy1 sprite: I forget
+* Enemy1 sprite: I forget :c
 * [Enemy2 sprite][link4]
 * [Bg image][link5]
 * [Boss sprite][link6]
