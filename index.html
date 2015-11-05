@@ -24,9 +24,13 @@
     font-family: arial, sans-serif;
   }
 
-  canvas{
+  canvas#main{
     border: 1px solid white;
     background: black;
+  }
+
+  canvas#temp{
+    display: none;
   }
 
   #instructs{
@@ -86,7 +90,8 @@
       <p>Press <strong>spacebar</strong> to start!</p>
   </div>
 
-  <canvas></canvas>
+  <canvas id="main"></canvas>
+  <canvas id="temp"></canvas>
 
 
   <audio id="bgm" src="audio/space-philately.ogg" preload="auto" loop="true"></audio>
@@ -97,11 +102,14 @@
   <audio id="xplodeFX" src="audio/explosion.mp3" preload="auto"></audio>
 
   <script>
-    var canvasEl = document.getElementsByTagName("canvas")[0];
-    // canvasEl.height = 600;
-    // canvasEl.width = 800;
-    canvasEl.height = window.innerHeight-200;
+    var canvasEl = document.getElementById("main");
+    var tempCanvasEl = document.getElementById("temp");
+
     canvasEl.width = window.innerWidth-50;
+    canvasEl.height = window.innerHeight-200;
+
+    tempCanvasEl.width = 500;
+    tempCanvasEl.height = 400;
 
     var game = new window.BHGame.Game();
     var ctxt = canvasEl.getContext('2d');
@@ -111,7 +119,7 @@
         $("#instructs").toggle();
         $(document).unbind("keydown");         //unbind initial spacebar event
 
-        var gameView = new window.BHGame.GameView(game, ctxt);
+        var gameView = new window.BHGame.GameView(game, ctxt, tempCanvasEl);
 
         window.BHGame.Resources.load([
             'img/bg.png',

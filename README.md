@@ -1,4 +1,4 @@
-#Bullet Hell (wip)
+#Bullet Hell
 Ariel Hou, Oct 2015
 
 #Live Game
@@ -20,9 +20,10 @@ Ariel Hou, Oct 2015
 - [x] Add sprites for enemy ships
 - [x] Animate bullets to strobe
 - [x] Animate ship thrusters
-- [ ] Add background animation
+- [x] Add background animation
 - [x] Animate things to have explosions
 - [x] Add appropriate soundtrack
+- [ ] Always more to do
 
 ###Sources
 * [Ship sprite][link2]
