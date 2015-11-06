@@ -16,67 +16,15 @@
   <script src="lib/enemyB.js"></script>
   <script src="lib/game.js"></script>
   <script src="lib/gameView.js"></script>
-  <style>
-  body{
-    text-align: center;
-    background: black;
-    color: white;
-    font-family: arial, sans-serif;
-  }
 
-  canvas#main{
-    border: 1px solid white;
-    background: black;
-  }
-
-  canvas#temp{
-    display: none;
-  }
-
-  #instructs{
-    display: block;
-    position: fixed;
-    z-index: 1;
-    text-align: left;
-    width: 400px;
-    color: black;
-    margin: 50px 35vw;
-    background: white;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 200%;
-  }
-
-  h1{
-    letter-spacing: 0.1em;
-    font-weight: normal;
-  }
-
-  h3{
-    text-transform: lowercase;
-    font-variant: small-caps;
-    letter-spacing: .1em;
-  }
-
-  strong{
-    text-transform: uppercase;
-  }
-
-  ul{
-    list-style: none;
-    padding-left: 10px;
-  }
-
-  a{
-    color: white;
-  }
-  </style>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <h1>BULLET HELL</h1>
-  <h3><a href="http://arielity.net">Ariel Hou</a>, Oct 2015
-    (<a href="http://github.com/diiiefiend/bullethell">Github</a>)</h3>
-
+  <div id="header">
+    <h1>BULLET HELL</h1>
+    <h3><a href="http://arielity.net">Ariel Hou</a>, Oct 2015<br>
+      <a href="http://github.com/diiiefiend/bullethell">Github</a></h3>
+  </div>
 
   <div id="instructs">
     <h1>How to Play</h1>
@@ -90,7 +38,8 @@
       <p>Press <strong>spacebar</strong> to start!</p>
   </div>
 
-  <canvas id="main"></canvas>
+  <canvas id="main-bg"></canvas>
+  <canvas id="main-fg"></canvas>
   <canvas id="temp"></canvas>
 
 
@@ -102,24 +51,29 @@
   <audio id="xplodeFX" src="audio/explosion.mp3" preload="auto"></audio>
 
   <script>
-    var canvasEl = document.getElementById("main");
+    var bgcanvasEl = document.getElementById("main-bg");
+    var fgcanvasEl = document.getElementById("main-fg");
     var tempCanvasEl = document.getElementById("temp");
 
-    canvasEl.width = window.innerWidth-50;
-    canvasEl.height = window.innerHeight-200;
+    bgcanvasEl.width = window.innerWidth;
+    bgcanvasEl.height = window.innerHeight-200;
+
+    fgcanvasEl.width = window.innerWidth;
+    fgcanvasEl.height = window.innerHeight-200;
 
     tempCanvasEl.width = 500;
     tempCanvasEl.height = 400;
 
     var game = new window.BHGame.Game();
-    var ctxt = canvasEl.getContext('2d');
+    var bgctxt = bgcanvasEl.getContext('2d');
+    var fgctxt = fgcanvasEl.getContext('2d');
 
     $(document).keydown(function (e){
       if(e.keyCode === 32){
         $("#instructs").toggle();
         $(document).unbind("keydown");         //unbind initial spacebar event
 
-        var gameView = new window.BHGame.GameView(game, ctxt, tempCanvasEl);
+        var gameView = new window.BHGame.GameView(game, bgctxt, fgctxt, tempCanvasEl);
 
         window.BHGame.Resources.load([
             'img/bg.png',

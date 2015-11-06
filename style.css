@@ -1,0 +1,70 @@
+body{
+  background: url("img/bg.png");
+  color: white;
+  font-family: "helvetica neue",  "arial", sans-serif;
+}
+
+canvas#main-bg{
+  position: absolute;
+  z-index: 0;
+}
+
+canvas#main-fg{
+  position: absolute;
+  z-index: 1;
+}
+
+canvas#temp{
+  display: none;
+}
+
+#instructs{
+  display: block;
+  position: fixed;
+  z-index: 10;
+  text-align: left;
+  width: 400px;
+  color: black;
+  margin: 50px 35vw;
+  background: white;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 200%;
+}
+
+#header h1{
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  float: left;
+}
+
+#header h3{
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: .1em;
+  float: right;
+  text-align: right;
+}
+
+#header:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+strong{
+  text-transform: uppercase;
+}
+
+ul{
+  list-style: none;
+  padding-left: 10px;
+}
+
+a{
+  color: green;
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+}
