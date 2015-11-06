@@ -55,11 +55,8 @@
     var fgcanvasEl = document.getElementById("main-fg");
     var tempCanvasEl = document.getElementById("temp");
 
-    bgcanvasEl.width = window.innerWidth;
-    bgcanvasEl.height = window.innerHeight-200;
-
-    fgcanvasEl.width = window.innerWidth;
-    fgcanvasEl.height = window.innerHeight-200;
+    bgcanvasEl.width = fgcanvasEl.width = window.innerWidth;
+    bgcanvasEl.height = fgcanvasEl.height = window.innerHeight-200;
 
     tempCanvasEl.width = 500;
     tempCanvasEl.height = 400;
